@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\SignalRChatAppV2Server.WebAPI.props" />
+</Project>

@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+        <div class="login">
+            <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="email" name="email" placeholder="Email" required [(ngModel)]="loginModel.emailOrUserName">
+                <input type="password" name="pswd" placeholder="Password" required [(ngModel)]="loginModel.password">
+                <button>Login</button>
+            </form>
+        </div>
+    
+        <div class="signup">
+            <form #signupForm="ngForm" (ngSubmit)="signup(signupForm)">
+                <label for="chk" aria-hidden="true">Sign Up</label>
+                <input type="text" name="firstname" placeholder="First Name" required [(ngModel)]="userModel.firstName">
+                <input type="text" name="lastName" placeholder="Last Name" required [(ngModel)]="userModel.lastName">
+                <input type="text" name="userName" placeholder="User Name" required [(ngModel)]="userModel.userName">
+                <input type="email" name="email" placeholder="Email" required [(ngModel)]="userModel.email">
+                <input type="password" name="pswd" placeholder="Password" required [(ngModel)]="userModel.password">
+                <input style="padding-top: 5px;" type="file" name="profilePicture" (change)="setImage($event)">
+                <button>Sign up</button>
+            </form>
+        </div>
+    </div>
+
+</div>

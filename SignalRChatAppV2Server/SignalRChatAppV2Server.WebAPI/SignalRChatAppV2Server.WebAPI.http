@@ -1,0 +1,6 @@
+@SignalRChatAppV2Server.WebAPI_HostAddress = http://localhost:5089
+
+GET {{SignalRChatAppV2Server.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

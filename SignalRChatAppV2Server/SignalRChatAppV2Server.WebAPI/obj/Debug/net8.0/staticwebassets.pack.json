@@ -1,0 +1,53 @@
+{
+  "Files": [
+    {
+      "Id": "F:\\Eren\\Projeler\\Projects\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\wwwroot\\ImageMessages\\8793e4da-6715-42fb-8feb-18895eacdb94.jpg",
+      "PackagePath": "staticwebassets\\ImageMessages\\8793e4da-6715-42fb-8feb-18895eacdb94.jpg"
+    },
+    {
+      "Id": "F:\\Eren\\Projeler\\Projects\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\wwwroot\\ProfilePictures\\084d586d-caa7-4a3a-8836-ca809b93314b.jpg",
+      "PackagePath": "staticwebassets\\ProfilePictures\\084d586d-caa7-4a3a-8836-ca809b93314b.jpg"
+    },
+    {
+      "Id": "F:\\Eren\\Projeler\\Projects\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\wwwroot\\ProfilePictures\\0c4a8771-cb49-461d-b1d9-286d5c2a0934.jpg",
+      "PackagePath": "staticwebassets\\ProfilePictures\\0c4a8771-cb49-461d-b1d9-286d5c2a0934.jpg"
+    },
+    {
+      "Id": "F:\\Eren\\Projeler\\Projects\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\wwwroot\\ProfilePictures\\0e11891f-ee9f-4d7f-8117-932187ea9414.jpg",
+      "PackagePath": "staticwebassets\\ProfilePictures\\0e11891f-ee9f-4d7f-8117-932187ea9414.jpg"
+    },
+    {
+      "Id": "F:\\Eren\\Projeler\\Projects\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\wwwroot\\ProfilePictures\\1b6f01a0-0e44-4fef-8282-658d2388b0b5.jpg",
+      "PackagePath": "staticwebassets\\ProfilePictures\\1b6f01a0-0e44-4fef-8282-658d2388b0b5.jpg"
+    },
+    {
+      "Id": "F:\\Eren\\Projeler\\Projects\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\wwwroot\\ProfilePictures\\3fc59bf6-a963-4065-8092-b31d4971f3e9.png",
+      "PackagePath": "staticwebassets\\ProfilePictures\\3fc59bf6-a963-4065-8092-b31d4971f3e9.png"
+    },
+    {
+      "Id": "F:\\Eren\\Projeler\\Projects\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\wwwroot\\ProfilePictures\\df64ab94-9036-41b4-a9aa-680c505193b8.jpg",
+      "PackagePath": "staticwebassets\\ProfilePictures\\df64ab94-9036-41b4-a9aa-680c505193b8.jpg"
+    },
+    {
+      "Id": "F:\\Eren\\Projeler\\Projects\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\wwwroot\\ProfilePictures\\f50e64ef-0098-4e30-be0c-75b14eae3065.jpg",
+      "PackagePath": "staticwebassets\\ProfilePictures\\f50e64ef-0098-4e30-be0c-75b14eae3065.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SignalRChatAppV2Server.WebAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.SignalRChatAppV2Server.WebAPI.props",
+      "PackagePath": "build\\SignalRChatAppV2Server.WebAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.SignalRChatAppV2Server.WebAPI.props",
+      "PackagePath": "buildMultiTargeting\\SignalRChatAppV2Server.WebAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.SignalRChatAppV2Server.WebAPI.props",
+      "PackagePath": "buildTransitive\\SignalRChatAppV2Server.WebAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

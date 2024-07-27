@@ -1,0 +1,355 @@
+<div class="grid">
+  <div class="top"></div>
+
+  <div class="bottom"></div>
+
+  <div class="app">
+
+    <div class="sidebar">
+
+      <div class="sidebar-header">
+        <img src="https://localhost:7212/ProfilePictures/{{userModel.profilePicture}}" alt="">
+        <label style="font-size: 16px; font-weight: bold; margin-left: 10px; margin-top: 10px;" for="">{{auth.user.userName}}</label>
+        <div class="sidebar-header-icons">
+          <img src="assets/images/status.svg" (click)="logout()">
+          <img src="assets/images/message-icon.svg">
+          <img src="assets/images/menu-icon.svg">
+        </div>
+      </div>
+
+      <!-- <div class="sidebar-notifications">
+        <img src="assets/images/notifications.svg" alt="">
+        <div class="sidebar-notifications-message">
+          <span>Get Notified of New Messages</span>
+          <a href="#">Turn on desktop notifications <img src="assets/images/gt-arrow.svg" alt=""></a>
+        </div>
+      </div> -->
+
+      <div class="search-chat">
+        <div class="search-bar">
+          <img src="assets/images/search-icon.svg" alt="">
+          <input type="text" placeholder="Search or start new chat">
+        </div>
+      </div>
+
+      <div class="chats">
+
+        @for (user of users; track user) {
+          <div class="chat" (click)="changeUser(user)">
+            <div class="chat-left">
+              <img src="https://localhost:7212/ProfilePictures/{{user.profilePicture}}">
+            </div>
+            <div class="chat-right">
+              <div class="chat-right-top">
+                <span class="contact-name">{{user.userName}}</span>
+                <span class="chat-date"></span>
+              </div>
+              <div class="chat-right-bottom">
+                <div class="chat-right-bottom-left">
+                  <img class="double-check-mark" src="assets/images/double-check-seen.svg">
+                  <span class="chat-message"></span>
+                </div>
+                <div class="chat-right-bottom-right">
+                  <span class="chat-date">{{user.status}}</span>
+                  <!-- <span class="chat-options">
+                    <img src="assets/images/down-arrow.svg">
+                  </span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+
+        <!-- <div class="chat active-chat">
+          <div class="chat-left">
+            <img src="assets/images/alice.jpg">
+          </div>
+          <div class="chat-right">
+            <div class="chat-right-top">
+              <span class="contact-name">Alice</span>
+              <span class="chat-date">12:51</span>
+            </div>
+            <div class="chat-right-bottom">
+              <div class="chat-right-bottom-left">
+                <img class="double-check-mark" src="assets/images/double-check-seen.svg">
+                <span class="chat-message-typing">Alice is typing...</span>
+              </div>
+              <div class="chat-right-bottom-right">
+                <span class="unread-messages-number">3</span>
+                <span class="chat-options">
+                  <img src="assets/images/down-arrow.svg">
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chat">
+          <div class="chat-left">
+            <img src="assets/images/jason.jpg">
+          </div>
+          <div class="chat-right">
+            <div class="chat-right-top">
+              <span class="contact-name">Jhon</span>
+              <span class="chat-date">12:51</span>
+            </div>
+            <div class="chat-right-bottom">
+              <div class="chat-right-bottom-left">
+                <img class="double-check-mark" src="assets/images/double-check-seen.svg">
+                <span class="chat-message">Whatsup men</span>
+              </div>
+              <div class="chat-right-bottom-right">
+                <span class="unread-messages-number">3</span>
+                <span class="chat-options"><img src="assets/images/down-arrow.svg"></span>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+      </div>
+
+    </div>
+    
+    @if (selectedUserId) {
+    <div class="main">
+      <div class="chat-window-header">
+        <div class="chat-window-header-left">
+          <img class="chat-window-contact-image" src="https://localhost:7212/ProfilePictures/{{selectedUser.profilePicture}}">
+          <div class="contact-name-and-status-container">
+            <span class="chat-window-contact-name">{{selectedUser.userName}}</span>
+            <span class="chat-window-contact-status">{{selectedUser.status}}</span>
+          </div>
+        </div>
+        <div class="chat-window-header-right">
+          <img class="chat-window-search-icon" src="assets/images/search-icon.svg">
+          <img class="chat-window-menu-icon" src="assets/images/menu-icon.svg">
+        </div>
+      </div>
+      <div class="chat-window">
+
+        @for (chat of chats; track chat) {
+          @if (selectedUserId != chat.userId) {
+            @if (chat.image !== "") {
+              <div class="sender image-message">
+                <span class="sender-message">
+                  <img src="https://localhost:7212/ImageMessages/{{chat.image}}">
+                </span>
+                <span class="message-time">{{chat.date | date: 'HH:mm'}}</span>
+              </div>
+            }@else{
+              <div class="sender">
+                <span class="sender-message-tail">
+                  <img src="assets/images/message-tail-sender.svg">
+                </span>
+                <span class="sender-message">{{chat.message}}</span>
+                <span class="message-time">{{chat.date | date: 'HH:mm'}}</span>
+                <span class="message-status">
+                  <img src="assets/images/double-check-seen.svg">
+                </span>
+              </div>
+
+            }
+          }@else {
+            @if (chat.image !== "") {
+              <div class="receiver image-message">
+                <span class="receiver-message">
+                  <img src="https://localhost:7212/ImageMessages/{{chat.image}}">
+                </span>
+                <span class="message-time">{{chat.date | date: 'HH:mm'}}</span>
+              </div>
+            }@else {
+              <div class="receiver">
+                <span class="receiver-message-tail">
+                  <img src="assets/images/message-tail-receiver.svg">
+                </span>
+                <span class="receiver-message">{{chat.message}}</span>
+                <span class="message-time">{{chat.date | date: 'HH:mm'}}</span>
+              </div>
+
+            }
+          }
+
+        }
+
+        <!-- <div class="sender">
+          <span class="sender-message-tail">
+            <img src="assets/images/message-tail-sender.svg">
+          </span>
+          <span class="sender-message">Merhaba Nasılsın</span>
+          <span class="message-time">21:33</span>
+          <span class="message-status">
+            <img src="assets/images/double-check-seen.svg">
+          </span>
+        </div>
+
+        <div class="receiver">
+          <span class="receiver-message-tail">
+            <img src="assets/images/message-tail-receiver.svg">
+          </span>
+          <span class="receiver-message">İyiyim sen nasılsın?</span>
+          <span class="message-time">21:35</span>
+        </div> -->
+
+        <!-- <div class="sender">
+          <span class="sender-message-tail">
+            <img src="assets/images/message-tail-sender.svg">
+          </span>
+          <span class="sender-message">Ben de iyiyim. Bu gün ne yapıyorsun?</span>
+          <span class="message-time">21:37</span>
+          <span class="message-status">
+            <img src="assets/images/double-check-seen.svg">
+          </span>
+        </div>
+
+        <div class="receiver">
+          <span class="receiver-message-tail">
+            <img src="assets/images/message-tail-receiver.svg">
+          </span>
+          <span class="receiver-message">Projemi bitirmeye çalışyorum.</span>
+          <span class="message-time">21:38</span>
+        </div>
+
+        <div class="receiver image-message">
+          <span class="receiver-message">
+            <img src="assets/images/meme-coding.png">
+          </span>
+          <span class="message-time">21:38</span>
+        </div>
+
+        <div class="receiver image-message">
+          <span class="receiver-message">
+            <img src="assets/images/meme-khaleesi.jpg">
+          </span>
+          <span class="message-time">21:38</span>
+        </div>
+
+        <div class="receiver receiver-audio-message">
+          <div class="audio-message">
+            <div class="audio-message-left">
+              <img src="assets/images/play-audio-icon.svg">
+            </div>
+            <div class="audio-message-center">
+              <div class="audio-message-center-top">
+                <span class="audio-message-bar"></span>
+                <input type="range" min="0" max="100" value="75">
+              </div>
+              <div class="audio-message-center-bottom">
+                <div class="audio-message-bottom">
+                  <span class="audio-message-length">1:15</span>
+                  <span class="message-time">21:45</span>
+                </div>
+              </div>
+            </div>
+            <div class="audio-message-right">
+              <img class="audio-message-contact-image" src="assets/images/alice.jpg" alt="">
+              <img class="audio-message-microphone" src="assets/images/microphone-seen.svg" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="sender">
+          <span class="sender-message-tail">
+            <img src="assets/images/message-tail-sender.svg" alt="">
+          </span>
+          <span class="sender-message">hahahahahaha</span>
+          <span class="message-time">21:47</span>
+          <span class="message-status">
+            <img src="assets/images/double-check-seen.svg" alt="">
+          </span>
+        </div>
+
+        <div class="sender">
+          
+          <span class="sender-message">:D :D :D</span>
+          <span class="message-time">21:47</span>
+          <span class="message-status">
+            <img src="assets/images/double-check-seen.svg" alt="">
+          </span>
+        </div> -->
+        <div class="type-message-bar">
+          <div class="type-message-bar-left">
+            <img src="assets/images/icons.svg" alt="" (click)="toggleEmojiPicker()">
+            <img src="assets/images/attach-icon.svg" (click)="triggerFileInput()">
+            <input #fileInput style="padding-top: 5px;" type="file" name="image" (change)="setImage($event)">
+            <div class="emoji-picker" *ngIf="showEmojiPicker">
+              <span (click)="addEmoji('😀')">😀</span>
+              <span (click)="addEmoji('😁')">😁</span>
+              <span (click)="addEmoji('😂')">😂</span>
+              <span (click)="addEmoji('😃')">😃</span>
+              <span (click)="addEmoji('😄')">😄</span>
+              <span (click)="addEmoji('😅')">😅</span>
+              <span (click)="addEmoji('😆')">😆</span>
+              <span (click)="addEmoji('😇')">😇</span>
+              <span (click)="addEmoji('😈')">😈</span>
+              <span (click)="addEmoji('😉')">😉</span>
+              <span (click)="addEmoji('😊')">😊</span>
+              <span (click)="addEmoji('😋')">😋</span>
+              <span (click)="addEmoji('😌')">😌</span>
+              <span (click)="addEmoji('😍')">😍</span>
+              <span (click)="addEmoji('😎')">😎</span>
+              <span (click)="addEmoji('😏')">😏</span>
+              <span (click)="addEmoji('😐')">😐</span>
+              <span (click)="addEmoji('😑')">😑</span>
+              <span (click)="addEmoji('😒')">😒</span>
+              <span (click)="addEmoji('😓')">😓</span>
+              <span (click)="addEmoji('😔')">😔</span>
+              <span (click)="addEmoji('😕')">😕</span>
+              <span (click)="addEmoji('😖')">😖</span>
+              <span (click)="addEmoji('😗')">😗</span>
+              <span (click)="addEmoji('😘')">😘</span>
+              <span (click)="addEmoji('😙')">😙</span>
+              <span (click)="addEmoji('😚')">😚</span>
+              <span (click)="addEmoji('😛')">😛</span>
+              <span (click)="addEmoji('😜')">😜</span>
+              <span (click)="addEmoji('😝')">😝</span>
+              <span (click)="addEmoji('😞')">😞</span>
+
+              <!-- Daha fazla emoji ekleyebilirsiniz -->
+            </div>
+          </div>
+          <div class="type-message-bar-center">
+            <input [(ngModel)]="message" (keyup)="onKeyUp($event)" type="text" placeholder="Type a message">
+          </div>
+          <div class="type-message-bar-left">
+            <img src="assets/images/audio-icon.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  }@else {
+    <div class="main">
+      <div class="chat-window-header">
+        <div class="chat-window-header-left">
+          <!-- <img class="chat-window-contact-image" src="https://localhost:7212/ProfilePictures/{{selectedUser.profilePicture}}"> -->
+          <div class="contact-name-and-status-container">
+            <span class="chat-window-contact-name">{{selectedUser.userName}}</span>
+            <span class="chat-window-contact-status">{{selectedUser.status}}</span>
+          </div>
+        </div>
+        <div class="chat-window-header-right">
+          <img class="chat-window-search-icon" src="assets/images/search-icon.svg">
+          <img class="chat-window-menu-icon" src="assets/images/menu-icon.svg">
+        </div>
+      </div>
+      <div class="chat-window">
+
+        
+        <div class="type-message-bar">
+          <div class="type-message-bar-left">
+            <img src="assets/images/icons.svg" alt="">
+            <img src="assets/images/attach-icon.svg" alt="">
+          </div>
+          <div class="type-message-bar-center">
+            <input type="text" placeholder="Type a message">
+          </div>
+          <div class="type-message-bar-left">
+            <img src="assets/images/audio-icon.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+  </div>      
+</div>
+
