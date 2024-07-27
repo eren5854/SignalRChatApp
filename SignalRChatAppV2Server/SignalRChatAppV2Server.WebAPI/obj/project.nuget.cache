@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R3n/0q93j4A=",
+  "dgSpecHash": "Pl6dkcNmMJU=",
   "success": true,
-  "projectFilePath": "F:\\Eren\\Projeler\\Projects\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\SignalRChatAppV2Server.WebAPI.csproj",
+  "projectFilePath": "F:\\Eren\\Projeler\\Projects\\SignalRChatApp\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\SignalRChatAppV2Server.WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ihsan\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\ihsan\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

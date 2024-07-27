@@ -4,7 +4,6 @@ import { HomeComponent } from './components/home/home.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { inject } from '@angular/core';
 import { AuthService } from './services/auth.service';
-import { SignupComponent } from './components/signup/signup.component';
 
 export const routes: Routes = [
     {
@@ -17,10 +16,6 @@ export const routes: Routes = [
                 component: HomeComponent
             }
         ]
-    },
-    {
-        path: "signup",
-        component: SignupComponent
     },
     {
         path: "login",

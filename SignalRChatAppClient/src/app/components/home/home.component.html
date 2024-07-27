@@ -4,9 +4,7 @@
   <div class="bottom"></div>
 
   <div class="app">
-
     <div class="sidebar">
-
       <div class="sidebar-header">
         <img src="https://localhost:7212/ProfilePictures/{{userModel.profilePicture}}" alt="">
         <label style="font-size: 16px; font-weight: bold; margin-left: 10px; margin-top: 10px;" for="">{{auth.user.userName}}</label>
@@ -17,23 +15,14 @@
         </div>
       </div>
 
-      <!-- <div class="sidebar-notifications">
-        <img src="assets/images/notifications.svg" alt="">
-        <div class="sidebar-notifications-message">
-          <span>Get Notified of New Messages</span>
-          <a href="#">Turn on desktop notifications <img src="assets/images/gt-arrow.svg" alt=""></a>
-        </div>
-      </div> -->
-
       <div class="search-chat">
         <div class="search-bar">
           <img src="assets/images/search-icon.svg" alt="">
-          <input type="text" placeholder="Search or start new chat">
+          <input type="text" placeholder="Search chat">
         </div>
       </div>
 
       <div class="chats">
-
         @for (user of users; track user) {
           <div class="chat" (click)="changeUser(user)">
             <div class="chat-left">
@@ -46,14 +35,15 @@
               </div>
               <div class="chat-right-bottom">
                 <div class="chat-right-bottom-left">
-                  <img class="double-check-mark" src="assets/images/double-check-seen.svg">
-                  <span class="chat-message"></span>
+                  @if (user.status === "online") {
+                    <!-- <img class="double-check-mark" src="assets/images/double-check-seen.svg"> -->
+                    <span style="color: green; font-size: 14px;">Online</span>
+                  }@else {
+                    <span style="color: red; font-size: 14px;">Offline</span>
+                  }
                 </div>
                 <div class="chat-right-bottom-right">
-                  <span class="chat-date">{{user.status}}</span>
-                  <!-- <span class="chat-options">
-                    <img src="assets/images/down-arrow.svg">
-                  </span> -->
+                  
                 </div>
               </div>
             </div>
@@ -107,9 +97,7 @@
         </div> -->
 
       </div>
-
     </div>
-    
     @if (selectedUserId) {
     <div class="main">
       <div class="chat-window-header">
@@ -125,8 +113,7 @@
           <img class="chat-window-menu-icon" src="assets/images/menu-icon.svg">
         </div>
       </div>
-      <div class="chat-window">
-
+      <div class="chat-window" #scrollMe>
         @for (chat of chats; track chat) {
           @if (selectedUserId != chat.userId) {
             @if (chat.image !== "") {
@@ -144,10 +131,15 @@
                 <span class="sender-message">{{chat.message}}</span>
                 <span class="message-time">{{chat.date | date: 'HH:mm'}}</span>
                 <span class="message-status">
-                  <img src="assets/images/double-check-seen.svg">
+                  @if (this.messageStatus === false) {
+                    <img src="assets/images/double-check.svg">
+
+                  }@else {
+                    <img src="assets/images/double-check-seen.svg">
+
+                  }
                 </span>
               </div>
-
             }
           }@else {
             @if (chat.image !== "") {
@@ -165,12 +157,9 @@
                 <span class="receiver-message">{{chat.message}}</span>
                 <span class="message-time">{{chat.date | date: 'HH:mm'}}</span>
               </div>
-
             }
           }
-
         }
-
         <!-- <div class="sender">
           <span class="sender-message-tail">
             <img src="assets/images/message-tail-sender.svg">
@@ -321,7 +310,6 @@
     <div class="main">
       <div class="chat-window-header">
         <div class="chat-window-header-left">
-          <!-- <img class="chat-window-contact-image" src="https://localhost:7212/ProfilePictures/{{selectedUser.profilePicture}}"> -->
           <div class="contact-name-and-status-container">
             <span class="chat-window-contact-name">{{selectedUser.userName}}</span>
             <span class="chat-window-contact-status">{{selectedUser.status}}</span>
@@ -332,9 +320,8 @@
           <img class="chat-window-menu-icon" src="assets/images/menu-icon.svg">
         </div>
       </div>
-      <div class="chat-window">
 
-        
+      <div class="chat-window">
         <div class="type-message-bar">
           <div class="type-message-bar-left">
             <img src="assets/images/icons.svg" alt="">

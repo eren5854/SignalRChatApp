@@ -2,6 +2,30 @@
   height: 70vh;
 }
 
+@media screen and (max-width: 1000px){
+  .main{
+    width: 530px !important;
+  }
+  .app{
+    /* display: flex; */
+    width: 800px !important;
+    height: 80%;
+  }
+  .sidebar{
+    width: 270px;
+    /* height: 60rem; */
+  }
+
+  .chats{
+    height: 69rem !important;
+    
+  }
+  .chat-window{
+    width: 53rem !important;
+    height: 70rem !important;
+  }
+}
+
 .grid{
   display: grid;
   height: 100%;
@@ -22,12 +46,12 @@
 }
 
 .app{
-  display: grid;
+  display: flex;
   grid-template-columns: 42rem 1fr;
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   width: 139.6rem;
-  height: 50rem;
+  height: 86%;
   margin: 5rem auto;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 1rem 0.05rem rgba(0, 0, 0, 0.2);
@@ -143,8 +167,8 @@
 }
 
 .chats{
-  height: 70.2rem;
-  overflow-y: scroll;
+  height: 71.5rem;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 
@@ -352,7 +376,8 @@
   display: flex;
   flex-direction: column;
   padding: 10rem 10rem 6rem 10rem;
-  height: 70rem;
+  height: 80rem;
+  width: 114rem;
   overflow: scroll;
   overflow-x: hidden;
   background: url(/assets/images/bg-chat.png);
@@ -580,10 +605,6 @@ input[type="file"] {
 
 .type-message-bar-right{
   margin-left: 2rem;
-}
-
-.emoji-img{
-
 }
 
 .emoji-picker {

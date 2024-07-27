@@ -1,18 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\Eren\\Projeler\\Projects\\SignalRChatAppV2Server\\",
+  "WorkspaceRootPath": "F:\\Eren\\Projeler\\Projects\\SignalRChatApp\\SignalRChatAppV2Server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D8D8F427-1E58-459F-AB36-96282691AECA}|SignalRChatAppV2Server.WebAPI\\SignalRChatAppV2Server.WebAPI.csproj|f:\\eren\\projeler\\projects\\signalrchatappv2server\\signalrchatappv2server.webapi\\controllers\\chatscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8D8F427-1E58-459F-AB36-96282691AECA}|SignalRChatAppV2Server.WebAPI\\SignalRChatAppV2Server.WebAPI.csproj|solutionrelative:signalrchatappv2server.webapi\\controllers\\chatscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D8D8F427-1E58-459F-AB36-96282691AECA}|SignalRChatAppV2Server.WebAPI\\SignalRChatAppV2Server.WebAPI.csproj|f:\\eren\\projeler\\projects\\signalrchatapp\\signalrchatappv2server\\signalrchatappv2server.webapi\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8D8F427-1E58-459F-AB36-96282691AECA}|SignalRChatAppV2Server.WebAPI\\SignalRChatAppV2Server.WebAPI.csproj|solutionrelative:signalrchatappv2server.webapi\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8D8F427-1E58-459F-AB36-96282691AECA}|SignalRChatAppV2Server.WebAPI\\SignalRChatAppV2Server.WebAPI.csproj|f:\\eren\\projeler\\projects\\signalrchatappv2server\\signalrchatappv2server.webapi\\services\\ichatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D8D8F427-1E58-459F-AB36-96282691AECA}|SignalRChatAppV2Server.WebAPI\\SignalRChatAppV2Server.WebAPI.csproj|f:\\eren\\projeler\\projects\\signalrchatapp\\signalrchatappv2server\\signalrchatappv2server.webapi\\services\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8D8F427-1E58-459F-AB36-96282691AECA}|SignalRChatAppV2Server.WebAPI\\SignalRChatAppV2Server.WebAPI.csproj|solutionrelative:signalrchatappv2server.webapi\\services\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8D8F427-1E58-459F-AB36-96282691AECA}|SignalRChatAppV2Server.WebAPI\\SignalRChatAppV2Server.WebAPI.csproj|f:\\eren\\projeler\\projects\\signalrchatapp\\signalrchatappv2server\\signalrchatappv2server.webapi\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8D8F427-1E58-459F-AB36-96282691AECA}|SignalRChatAppV2Server.WebAPI\\SignalRChatAppV2Server.WebAPI.csproj|solutionrelative:signalrchatappv2server.webapi\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8D8F427-1E58-459F-AB36-96282691AECA}|SignalRChatAppV2Server.WebAPI\\SignalRChatAppV2Server.WebAPI.csproj|f:\\eren\\projeler\\projects\\signalrchatapp\\signalrchatappv2server\\signalrchatappv2server.webapi\\services\\ichatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8D8F427-1E58-459F-AB36-96282691AECA}|SignalRChatAppV2Server.WebAPI\\SignalRChatAppV2Server.WebAPI.csproj|solutionrelative:signalrchatappv2server.webapi\\services\\ichatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8D8F427-1E58-459F-AB36-96282691AECA}|SignalRChatAppV2Server.WebAPI\\SignalRChatAppV2Server.WebAPI.csproj|f:\\eren\\projeler\\projects\\signalrchatappv2server\\signalrchatappv2server.webapi\\services\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8D8F427-1E58-459F-AB36-96282691AECA}|SignalRChatAppV2Server.WebAPI\\SignalRChatAppV2Server.WebAPI.csproj|solutionrelative:signalrchatappv2server.webapi\\services\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D8D8F427-1E58-459F-AB36-96282691AECA}|SignalRChatAppV2Server.WebAPI\\SignalRChatAppV2Server.WebAPI.csproj|f:\\eren\\projeler\\projects\\signalrchatapp\\signalrchatappv2server\\signalrchatappv2server.webapi\\controllers\\chatscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8D8F427-1E58-459F-AB36-96282691AECA}|SignalRChatAppV2Server.WebAPI\\SignalRChatAppV2Server.WebAPI.csproj|solutionrelative:signalrchatappv2server.webapi\\controllers\\chatscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 207,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,24 +38,50 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "F:\\Eren\\Projeler\\Projects\\SignalRChatApp\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\Models\\AppUser.cs",
+              "RelativeDocumentMoniker": "SignalRChatAppV2Server.WebAPI\\Models\\AppUser.cs",
+              "ToolTip": "F:\\Eren\\Projeler\\Projects\\SignalRChatApp\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\Models\\AppUser.cs",
+              "RelativeToolTip": "SignalRChatAppV2Server.WebAPI\\Models\\AppUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T15:23:48.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ChatHub.cs",
+              "DocumentMoniker": "F:\\Eren\\Projeler\\Projects\\SignalRChatApp\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\Hubs\\ChatHub.cs",
+              "RelativeDocumentMoniker": "SignalRChatAppV2Server.WebAPI\\Hubs\\ChatHub.cs",
+              "ToolTip": "F:\\Eren\\Projeler\\Projects\\SignalRChatApp\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\Hubs\\ChatHub.cs",
+              "RelativeToolTip": "SignalRChatAppV2Server.WebAPI\\Hubs\\ChatHub.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T14:41:46.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ChatService.cs",
-              "DocumentMoniker": "F:\\Eren\\Projeler\\Projects\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\Services\\ChatService.cs",
+              "DocumentMoniker": "F:\\Eren\\Projeler\\Projects\\SignalRChatApp\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\Services\\ChatService.cs",
               "RelativeDocumentMoniker": "SignalRChatAppV2Server.WebAPI\\Services\\ChatService.cs",
-              "ToolTip": "F:\\Eren\\Projeler\\Projects\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\Services\\ChatService.cs",
+              "ToolTip": "F:\\Eren\\Projeler\\Projects\\SignalRChatApp\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\Services\\ChatService.cs",
               "RelativeToolTip": "SignalRChatAppV2Server.WebAPI\\Services\\ChatService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADEAAAAbAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowDoAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-27T00:06:18.868Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "IChatService.cs",
-              "DocumentMoniker": "F:\\Eren\\Projeler\\Projects\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\Services\\IChatService.cs",
+              "DocumentMoniker": "F:\\Eren\\Projeler\\Projects\\SignalRChatApp\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\Services\\IChatService.cs",
               "RelativeDocumentMoniker": "SignalRChatAppV2Server.WebAPI\\Services\\IChatService.cs",
-              "ToolTip": "F:\\Eren\\Projeler\\Projects\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\Services\\IChatService.cs",
+              "ToolTip": "F:\\Eren\\Projeler\\Projects\\SignalRChatApp\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\Services\\IChatService.cs",
               "RelativeToolTip": "SignalRChatAppV2Server.WebAPI\\Services\\IChatService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -56,13 +90,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "ChatsController.cs",
-              "DocumentMoniker": "F:\\Eren\\Projeler\\Projects\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\Controllers\\ChatsController.cs",
+              "DocumentMoniker": "F:\\Eren\\Projeler\\Projects\\SignalRChatApp\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\Controllers\\ChatsController.cs",
               "RelativeDocumentMoniker": "SignalRChatAppV2Server.WebAPI\\Controllers\\ChatsController.cs",
-              "ToolTip": "F:\\Eren\\Projeler\\Projects\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\Controllers\\ChatsController.cs",
+              "ToolTip": "F:\\Eren\\Projeler\\Projects\\SignalRChatApp\\SignalRChatAppV2Server\\SignalRChatAppV2Server.WebAPI\\Controllers\\ChatsController.cs",
               "RelativeToolTip": "SignalRChatAppV2Server.WebAPI\\Controllers\\ChatsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAABVAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-27T00:04:58.585Z",
               "EditorCaption": ""

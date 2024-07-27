@@ -3,11 +3,10 @@ import { AuthService } from '../../services/auth.service';
 import { UserModel } from '../../models/user.model';
 import { HttpService } from '../../services/http.service';
 import { ChatModel } from '../../models/chat.model';
-
-import * as signalR from '@microsoft/signalr';
 import { GetChatsModel } from '../../models/getChats.model';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import * as signalR from '@microsoft/signalr';
 
 @Component({
   selector: 'app-home',
@@ -29,9 +28,12 @@ export class HomeComponent{
   selectedUser: UserModel = new UserModel();
   user = new UserModel();
   hub: signalR.HubConnection | undefined;
-  message: string = "";  
+  message: string = "";
+  lastMessage?: string;
+  messageStatus: boolean = false;
 
   @ViewChild('fileInput') fileInput: ElementRef | undefined;
+  @ViewChild('scrollMe') private myScrollContainer: ElementRef | undefined;
 
   constructor(
     public auth: AuthService,
@@ -41,25 +43,29 @@ export class HomeComponent{
       this.getUsers();    
     },500)
     this.getCurrentUser();
+    this.hubContext();
+  }
 
+  hubContext(){
     this.user = this.userModel;
 
     this.hub = new signalR.HubConnectionBuilder().withUrl("https://localhost:7212/chat-hub").build();
     this.hub.start().then(()=> {
       console.log("Connection is started...");  
+      this.messageStatus = false;
       // this.hub?.invoke("Connect", this.user.id);
       this.hub?.on("Users", (res:UserModel) => {
         console.log(res);
-        this.users.find(p=> p.id == res.id)!.status = res.status;        
+        this.users.find(p=> p.id === res.id)!.status = res.status;        
       });
 
       this.hub?.on("Messages",(res:ChatModel)=> {
         // console.log(res);
-        if(this.selectedUserId == res.userId){
+        if(this.selectedUserId === res.userId){
           this.chats.push(res);
         }
-      })
-    })
+      });
+    });
   }
 
   getCurrentUser(){
@@ -86,20 +92,24 @@ export class HomeComponent{
   changeUser(user: UserModel){
     this.selectedUserId = user.id;
     this.selectedUser = user;
+    if (user.status === "online") {
+      this.messageStatus = true;
+    }
+    if (user.status === "offline") {
+      this.messageStatus = false;
+    }
 
     this.getChatsModel.userId = this.userModel.id;
     this.getChatsModel.toUserId = user.id;
 
     this.http.post2<ChatModel[]>("Chats/GetChats", this.getChatsModel, (res) => {
-      // console.log(res);
       this.chats = res;
+      console.log(this.chats[49]);
+      // this.lastMessage = this.chats[49].message;
+      setTimeout(() => {
+        this.scrollToBottom();
+      },20);
     });
-  }
-
-  onKeyUp($event:any){
-    if ($event.keyCode === 13) {
-      this.sendMessage();
-    }
   }
 
   sendMessage(){
@@ -109,12 +119,20 @@ export class HomeComponent{
       formData.append("toUserId", String(this.getChatsModel.toUserId));
       formData.append("message", this.message);
       formData.append("image", this.chatModel.image);
+      this.lastMessage = this.message;
       this.http.post2<ChatModel>("Chats/SendMessage", formData, (res) => {
         console.log(res);
         this.chats.push(res);
         this.chatModel.image = "";
         this.message = "";
       });
+    }
+    this.scrollToBottom();
+  }
+
+  onKeyUp($event:any){
+    if ($event.keyCode === 13) {
+      this.sendMessage();
     }
   }
 
@@ -137,5 +155,11 @@ export class HomeComponent{
 
   triggerFileInput() {
     this.fileInput!.nativeElement.click();
+  }
+
+  scrollToBottom(){
+    try {
+      this.myScrollContainer!.nativeElement.scrollTop = this.myScrollContainer!.nativeElement.scrollHeight;
+    } catch(err) { } 
   }
 }
